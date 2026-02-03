@@ -138,9 +138,7 @@ const ringSaturnMaterial = new THREE.MeshStandardMaterial({
     map: ringSaturnTexture,
     side: THREE.DoubleSide,
     transparent: true,
-    opacity: 1,
-    roughness: 0.2,
-    metalness: 0
+    opacity: 1
 });
 
 const ringSaturn = new THREE.Mesh(ringSaturnGeometry, ringSaturnMaterial);
