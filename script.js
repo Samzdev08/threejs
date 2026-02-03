@@ -134,7 +134,7 @@ let saturnAngle = 0;
 const ringSaturnTexture = new THREE.TextureLoader().load('img/ringSaturn.jpg');
 
 const ringSaturnGeometry = new THREE.RingGeometry(30, 20, 64);
-const ringSaturnMaterial = new THREE.MeshStandardMaterial({
+const ringSaturnMaterial = new THREE.MeshBasicMaterial({
     map: ringSaturnTexture,
     side: THREE.DoubleSide,
     transparent: true,
