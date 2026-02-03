@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> solaire</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        body{
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card {
+            font-family: Arial, Helvetica, sans-serif;
+            position: absolute;
+            display: block;
+            flex-direction: column;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .card::after {
+            content: '';
+            position: absolute;
+            bottom: -55px; /* Pointe sous la carte */
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 30px;
+            border-style: solid;
+            border-color: #f4f4f4 transparent transparent transparent; /* Triangle */
+        }
+        .card h2 {
+            color: #f39c12;
+            text-align: center;
+            margin: 0 0 15px;
+        }
+        .card p {
+            margin: 0 0 10px;
+            color: #555;
+        }
+        #close {
+            float: right;
+            background-color: #dc3535;
+            border-radius: 4px;
+            font-weight: bold;
+            color: #fff;
+            border: none;
+            padding: 4px 6px;
+            transition: 0.4s;
+        }
+        #close:hover {
+            background-color: #b62626;
+        }
+    </style>
+</head>
+<body>
+    <div class="card" id="card">
+        <button id="close">X</button>
+        <h2>Le Soleil</h2>
+        <p><strong>Type:</strong> Étoile</p>
+        <p><strong>Distance:</strong> 149,6 M km</p>
+        <p><strong>Température:</strong> 5 500°C</p>
+        <p><strong>Diamètre:</strong> 1,39 M km</p>
+        <p><strong>Âge:</strong> 4,6 Mds d'années</p>
+    </div>
+</body>
+</html>
