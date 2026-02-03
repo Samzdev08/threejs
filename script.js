@@ -21,9 +21,9 @@ controls.update();
 
 //ajout des etoiles
 // ajout de la texture des etoiles , soleil
-const circleTexture = new THREE.TextureLoader().load('/img/circle-removebg-preview.png');
+const circleTexture = new THREE.TextureLoader().load('img/circle-removebg-preview.png');
 const texture = new THREE.TextureLoader();
-const sunTexture = texture.load('/img/sun.png');
+const sunTexture = texture.load('img/sun.png');
 
 // ajout de lumiere ambiente
 const light = new THREE.AmbientLight('rgb(255, 255, 255)', 0.5); // Réduction de l'intensité
@@ -88,14 +88,14 @@ scene.add(sun);
 // Planètes
 // array contenant les propri des planetes
 const planetes = [
-    { name: "Mercure", size: 4, position: { x: 40, y: 0, z: 5 }, texture: '/img/mercure.jpg', rotateSpeed: 0.021 }, // Mercure
-    { name: "Venus", size: 6, position: { x: 55, y: 5, z: 5 }, texture: '/img/venus.jpg', rotateSpeed: 0.015 }, // Venus
-    { name: "Terre", size: 11, position: { x: 80, y: 0, z: 10 }, texture: '/img/earth.png', rotateSpeed: 0.012 }, // Terre
-    { name: "Mars", size: 9, position: { x: 110, y: -5, z: 5 }, texture: '/img/mars.jpg', rotateSpeed: 0.01 }, // Mars
-    { name: "Jupiter", size: 20, position: { x: 150, y: 10, z: 20 }, texture: '/img/jupiter.jpg', rotateSpeed: 0.009 }, // Jupiter
-    { name: "Saturne", size: 17.5, position: { x: 210, y: 15, z: 25 }, texture: '/img/saturn.jpg', rotateSpeed: 0.007 }, // Saturne
-    { name: "Uranus", size: 15, position: { x: 270, y: 20, z: 30 }, texture: '/img/uranus.jpg', rotateSpeed: 0.006 }, // Uranus
-    { name: "Neptune", size: 15, position: { x: 330, y: 0, z: 35 }, texture: '/img/neptune.jpg', rotateSpeed: 0.005 } //Neptune
+    { name: "Mercure", size: 4, position: { x: 40, y: 0, z: 5 }, texture: 'img/mercure.jpg', rotateSpeed: 0.021 }, // Mercure
+    { name: "Venus", size: 6, position: { x: 55, y: 5, z: 5 }, texture: 'img/venus.jpg', rotateSpeed: 0.015 }, // Venus
+    { name: "Terre", size: 11, position: { x: 80, y: 0, z: 10 }, texture: 'img/earth.png', rotateSpeed: 0.012 }, // Terre
+    { name: "Mars", size: 9, position: { x: 110, y: -5, z: 5 }, texture: 'img/mars.jpg', rotateSpeed: 0.01 }, // Mars
+    { name: "Jupiter", size: 20, position: { x: 150, y: 10, z: 20 }, texture: 'img/jupiter.jpg', rotateSpeed: 0.009 }, // Jupiter
+    { name: "Saturne", size: 17.5, position: { x: 210, y: 15, z: 25 }, texture: 'img/saturn.jpg', rotateSpeed: 0.007 }, // Saturne
+    { name: "Uranus", size: 15, position: { x: 270, y: 20, z: 30 }, texture: 'img/uranus.jpg', rotateSpeed: 0.006 }, // Uranus
+    { name: "Neptune", size: 15, position: { x: 330, y: 0, z: 35 }, texture: 'img/neptune.jpg', rotateSpeed: 0.005 } //Neptune
 ];
 
 
@@ -126,12 +126,12 @@ const planeteRotation = planetes.map(item => ({
     distance: Math.sqrt(item.position.x * item.position.x + item.position.z * item.position.z), // Distance initiale par rapport au soleil
 }));
 
-const saturn = planetes.find(planet => planet.texture === '/img/saturn.jpg');
+const saturn = planetes.find(planet => planet.texture === 'img/saturn.jpg');
 const intervalle = Math.sqrt(saturn.position.x * saturn.position.x + saturn.position.z * saturn.position.z)
 let saturnAngle = 0;
 
 // anneaux de saturne
-const ringSaturnTexture = new THREE.TextureLoader().load('/img/ringSaturn.jpg');
+const ringSaturnTexture = new THREE.TextureLoader().load('img/ringSaturn.jpg');
 
 const ringSaturnGeometry = new THREE.RingGeometry(30, 20, 64);
 const ringSaturnMaterial = new THREE.MeshBasicMaterial({
